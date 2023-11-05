@@ -1,8 +1,8 @@
 h1 {
-  color: aqua;
+    color: red;
 }
 .box {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(138, 33, 33);
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
 }
