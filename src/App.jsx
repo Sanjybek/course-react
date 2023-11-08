@@ -1,9 +1,10 @@
 
 import { useState } from "react";
-import styles from "./App.modules.css"
+import styles from "./App.module.css"
 
 import Addtask from "./components/AddTask/AddTask";
 import List from "./components/List/List";
+import Posts from "./components/Posts/Posts";
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
   
   return (
       <>
-        <h1 className={'list'}>TODO LIST</h1>
+        {/* <h1 className={'list'}>TODO LIST</h1>
         <button onClick={handleCount}>click</button>
         <Addtask></Addtask>
         <List
@@ -33,8 +34,8 @@ function App() {
         str={str}
         arr={arr}
         numer={numer}
-
-        />
+        /> */}
+        <Posts/>
         
       </>
   )
