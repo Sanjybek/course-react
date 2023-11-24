@@ -1,12 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
+const List = React.memo(({delet, startEditing}) => {
 
-const List = React.memo(({arr, delet, startEditing}) => {
-
-    // console.log('List');
-    // const call = (state) => state
-    const store = useSelector((state) => state.todoList)
-    console.log(store, 'store');
+    const arr = useSelector((state) => state.todoList)
     return (
         <ul>
             {arr.map((arr) => {
@@ -16,7 +12,7 @@ const List = React.memo(({arr, delet, startEditing}) => {
                         <h1>{title}</h1>
                         <p>{desc}</p>
                         <button onClick={() => delet(id)}>delet</button>
-                        <button onClick={() => startEditing(id)}>Редактировать</button>
+                        <button onClick={() => startEditing(arr)}>Редактировать</button>
                     </li>
                 )
             })}
