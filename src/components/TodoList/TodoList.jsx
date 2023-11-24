@@ -1,28 +1,29 @@
 import { useCallback, useState } from "react"
 import List from "./Components/List/List"
 import AddTodo from "./Components/AddTodo/AddTodo"
+import { useDispatch } from 'react-redux'
+import { deleteTodo } from "../Store/actions"
 
 function TodoList () {
+  const dispatch = useDispatch()
     const [title, setTitle] = useState('')
     const [desc, setDesc] = useState('')    
-    const [arr, setArr] = useState([])
     const [item, setItem] = useState(null) 
-    console.log('TodoList');
 
 
     const delet = useCallback((id) => {
-      setArr((prevArr) => prevArr.filter((i) => i.id !== id));
+      dispatch(deleteTodo(id))
     }, [])
     
    
-    const  startEditing = useCallback((id) => {
-      setItem(id);
-      const itemToEdit = arr.find((i) => i.id === id);
-      if (itemToEdit) {
-        setTitle(itemToEdit.title);
-        setDesc(itemToEdit.desc);
-      }
-    }, [arr])
+    const  startEditing = useCallback((arr) => {
+      const {title, desc} = arr
+      console.log(arr, 'arr');
+        setTitle(title);
+        setDesc(desc);
+        setItem(arr)
+      // }
+    }, [])
     
 
     return (
@@ -35,15 +36,13 @@ function TodoList () {
             setDesc={setDesc}
             setItem={setItem}
             item={item}
-            arr={arr}
-            setArr={setArr}
+           
           />
           
           <List
           delet={delet}
           startEditing={startEditing}
-          arr={arr}
-
+        
           />
         </>
        

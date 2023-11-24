@@ -10,7 +10,7 @@ import TodoList from "./components/TodoList/TodoList";
 function App() {
 
   const [count, setCount] = useState(1)
-  console.log(count);
+  // console.log(count);
   const handleCount = () => {
     setCount(2)
   }

@@ -1,24 +1,19 @@
-import { addTodo } from "../../../Store";
 import { useDispatch } from 'react-redux'
+import { addTodo, editTodo } from '../../../Store/actions';
 function AddTodo ({title,desc,setTitle, setDesc,setItem, item, setArr}) {
-    const dispach = useDispatch();
-    const obj = {
-        title: 'title',
-        description: 'description',
-        id: 1231
-    }
-    dispach(addTodo(obj))
-    console.log('AddTodo');
+    console.log(title);
+    const dispatch = useDispatch()
     const addTitle = () => {
         if(title.trim() !== '' && desc.trim() !== '') {
           
-          if (item !== null) {
-            setArr((prevArr) => prevArr.map((i) =>i.id === item ? { ...i, title, desc } : i))
+          if (item) {
+            dispatch(editTodo({title, desc, id: item.id}))
+            
             setItem(null);
             setTitle('');
             setDesc('');
         } else {
-            setArr((prevArr) => [ ...prevArr, {title: title, desc: desc, id: Math.random()},]);
+            dispatch(addTodo({title, desc, id: Math.random()}))
             setTitle('');
             setDesc('');
         }  
