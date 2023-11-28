@@ -2,7 +2,7 @@ import { useCallback, useState } from "react"
 import List from "./Components/List/List"
 import AddTodo from "./Components/AddTodo/AddTodo"
 import { useDispatch } from 'react-redux'
-import { deleteTodo } from "../../Store/actions"
+import { deleteTodo } from "../../store/actions"
 
 function TodoList () {
   const dispatch = useDispatch()

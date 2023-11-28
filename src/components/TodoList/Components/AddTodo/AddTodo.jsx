@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { addTodo, editTodo } from '../../../../Store/actions';
+import { addTodo, editTodo } from '../../../../store/actions';
 function AddTodo ({title,desc,setTitle, setDesc,setItem, item, setArr}) {
     console.log(title);
     const dispatch = useDispatch()
