@@ -23,6 +23,9 @@ function App() {
   const arr = ['item1','item2','item3']
   const numer = 123456
 
+
+  
+
   
   return (
       <>
