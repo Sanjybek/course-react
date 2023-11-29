@@ -19,7 +19,7 @@ const Header = () => {
                 <Link to={'/count'}> count</Link>
             </li>
             <li>
-                <Link to={'/posts'}> count</Link>
+                <Link to={'/posts'}> posts</Link>
             </li>
             
        </ul>
