@@ -6,7 +6,7 @@ import Posts from "../components/Posts/Posts";
 import Count from "../components/Count/Count";
 import UserList from "../components/UserList/UserList"
 import {createBrowserRouter} from "react-router-dom";
-import TodoLIstPage from './TodoListPage/TodoLIstPage';
+import TodoLIstPage from './TodoListPage/TodoListPage';
 import Header from '../components/Header/Header';
 
 

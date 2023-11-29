@@ -1,8 +1,8 @@
 import React from 'react';
-import TodoList from '../../components/TodoList/TodoList';
+import TodoListContainer from '../../containers/TodoListContainer/TodoListContainer';
 
 const TodoLIstPage = () => {
-    return <TodoList/>
+    return <TodoListContainer/>
 };
 
 export default TodoLIstPage;
