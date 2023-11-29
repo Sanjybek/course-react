@@ -15,6 +15,12 @@ const Header = () => {
             <li>
                 <Link to={'/add-task'}> add-task</Link>
             </li>
+            <li>
+                <Link to={'/count'}> count</Link>
+            </li>
+            <li>
+                <Link to={'/posts'}> count</Link>
+            </li>
             
        </ul>
     );

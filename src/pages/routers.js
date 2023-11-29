@@ -51,5 +51,23 @@ const router = createBrowserRouter([
         </>
       )
     },
+    {
+      path: "/count",
+      element: (
+        <>
+          <Header/>
+          <Count/>
+        </>
+      )
+    },
+    {
+      path: "/posts",
+      element: (
+        <>
+          <Header/>
+          <Posts/>
+        </>
+      )
+    },
   ]);
 export default router 
