@@ -11,6 +11,7 @@ import styles from "./App.module.css"
 
 import Addtask from "./components/AddTask/AddTask";
 import List from "./components/List/List";
+import Posts from "./components/Posts/Posts";
 import Count from "./components/Count/Count";
 
 import {
@@ -56,9 +57,13 @@ function App() {
   const arr = ['item1','item2','item3']
   const numer = 123456
 
+
+  
+
   
   return (
       <>
+        {/* <h1 className={'list'}>TODO LIST</h1>
         <h1 className={'list'}>TODO LIST</h1>
         <Count/>
         <button onClick={handleCount}>click</button>
@@ -68,6 +73,8 @@ function App() {
         str={str}
         arr={arr}
         numer={numer}
+        /> */}
+        <Posts/>
         />
           {/* <UserList/> */}
           {/* <h1 className={'list'}>TODO LIST</h1>
