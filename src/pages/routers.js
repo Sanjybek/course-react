@@ -6,7 +6,7 @@ import Posts from "../components/Posts/Posts";
 import Count from "../components/Count/Count";
 import UserList from "../components/UserList/UserList"
 import {createBrowserRouter} from "react-router-dom";
-import TodoLIstPage from './TodoListPage/TodoListPage';
+import TodoListPage from './TodoListPage/TodoListPage';
 import Header from '../components/Header/Header';
 
 
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       element: (
         <>
           <Header/>
-          <TodoLIstPage/>
+          <TodoListPage/>
           {/* <TodoList/> */}
         </>
       )
