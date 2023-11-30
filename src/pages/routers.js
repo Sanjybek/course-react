@@ -1,18 +1,20 @@
 import React from 'react'
-import styles from "../App.module.css"
 
-import Addtask from "../components/AddTask/AddTask";
-import Posts from "../components/Posts/Posts";
-import Count from "../components/Count/Count";
-import UserList from "../components/UserList/UserList"
+
 import {createBrowserRouter} from "react-router-dom";
+
 import TodoListPage from './TodoListPage/TodoListPage';
 import Header from '../components/Header/Header';
+
+import PostsPage from './PostPage';
+
+
 
 
 const router = createBrowserRouter([
     {
       path: "/",
+
       element: (
         <>
           <Header/>
@@ -68,5 +70,9 @@ const router = createBrowserRouter([
         </>
       )
     },
+
+      element: <PostsPage/>
+    }
+
   ]);
 export default router 

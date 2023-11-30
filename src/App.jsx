@@ -2,9 +2,7 @@ import React from 'react'
 import  router  from "./pages/routers";
 
 
-import {
-  RouterProvider
-} from "react-router-dom";
+import {RouterProvider} from "react-router-dom";
 
 
 
